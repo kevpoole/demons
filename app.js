@@ -1,4 +1,4 @@
-const ctx = new AudioContext();
+// const ctx = new AudioContext();
 const one = document.querySelector(".one")
 const two = document.querySelector(".two")
 
@@ -14,8 +14,6 @@ function randWord (text) {
     return words[Math.floor(Math.random()*words.length)];
 }
 
-
-
 one.addEventListener('click', playOne)
 two.addEventListener('click', playTwo)
 
@@ -25,35 +23,35 @@ function getRndInteger(min, max) {
 
 function playOne () {
     const size = getRndInteger(100, 500)
-    const osc = ctx.createOscillator();
-    const gainNode = ctx.createGain();
-    osc.connect(gainNode);
-    osc.frequency.setValueAtTime(size * 2, ctx.currentTime);
-    gainNode.gain.setTargetAtTime(0, ctx.currentTime, .02);
+    // const osc = ctx.createOscillator();
+    // const gainNode = ctx.createGain();
+    // osc.connect(gainNode);
+    // osc.frequency.setValueAtTime(size * 2, ctx.currentTime);
+    // gainNode.gain.setTargetAtTime(0, ctx.currentTime, .02);
 
-    osc.type = "triangle";
-    gainNode.gain.value = 0.5;
-    gainNode.connect(ctx.destination);
-    osc.start();
+    // osc.type = "triangle";
+    // gainNode.gain.value = 0.5;
+    // gainNode.connect(ctx.destination);
+    // osc.start();
     
-    setTimeout(() => osc.stop(),100); 
+    // setTimeout(() => osc.stop(),100); 
     one.style.height = `${size}px`
     one.style.width = `${size /2}px`
     one.innerText = `${randWord(text)}`
 }
 function playTwo () {
     const size = getRndInteger(100, 500)
-    const osc = ctx.createOscillator();
-    const gainNode = ctx.createGain();
-    osc.connect(gainNode);
-    osc.frequency.setValueAtTime(size, ctx.currentTime);
-    gainNode.gain.setTargetAtTime(0, ctx.currentTime, .05);
-    osc.type = "triangle";
-    gainNode.gain.value = 0.5;
-    gainNode.connect(ctx.destination);
-    osc.start();
+    // const osc = ctx.createOscillator();
+    // const gainNode = ctx.createGain();
+    // osc.connect(gainNode);
+    // osc.frequency.setValueAtTime(size, ctx.currentTime);
+    // gainNode.gain.setTargetAtTime(0, ctx.currentTime, .05);
+    // osc.type = "triangle";
+    // gainNode.gain.value = 0.5;
+    // gainNode.connect(ctx.destination);
+    // osc.start();
     
-    setTimeout(() => osc.stop(), 100); 
+    // setTimeout(() => osc.stop(), 100); 
     two.style.height = `${size}px`
     two.style.width = `${size /2}px`
     two.innerText = `${randWord(textTwo)}`
