@@ -3,10 +3,9 @@ const one = document.querySelector(".one")
 const two = document.querySelector(".two")
 
 
-// const text = "He who fights with monsters should look to it that he himself does not become a monster."
+
 const textTwo = "Be careful, lest in casting out your demon you exorcise the best thing in you."
 
-// console.log(text)
 console.log(textTwo)
 
 function randWord (text) {
