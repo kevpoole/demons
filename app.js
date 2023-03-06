@@ -3,10 +3,10 @@ const one = document.querySelector(".one")
 const two = document.querySelector(".two")
 
 
-const text = "He who fights with monsters should look to it that he himself does not become a monster."
+// const text = "He who fights with monsters should look to it that he himself does not become a monster."
 const textTwo = "Be careful, lest in casting out your demon you exorcise the best thing in you."
 
-console.log(text)
+// console.log(text)
 console.log(textTwo)
 
 function randWord (text) {
@@ -37,7 +37,7 @@ function playOne () {
     // setTimeout(() => osc.stop(),100); 
     one.style.height = `${size}px`
     one.style.width = `${size /2}px`
-    one.innerText = `${randWord(text)}`
+    one.innerText = `${randWord(textTwo)}`
 }
 function playTwo () {
     const size = getRndInteger(100, 500)
