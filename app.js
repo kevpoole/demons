@@ -38,6 +38,7 @@ function playOne () {
     one.style.height = `${size}px`
     one.style.width = `${size /2}px`
     one.innerText = `${randWord(textTwo)}`
+    
 }
 function playTwo () {
     const size = getRndInteger(100, 500)
