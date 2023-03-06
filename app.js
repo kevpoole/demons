@@ -8,6 +8,7 @@ const textTwo = "Be careful, lest in casting out your demon you exorcise the bes
 
 console.log(textTwo)
 
+
 function randWord (text) {
     const words = text.split(' ')
     return words[Math.floor(Math.random()*words.length)];
